@@ -1,0 +1,112 @@
+@CHARSET "UTF-8";
+
+.dialogDiv {
+	position: absolute;
+	z-index: 1000;
+	padding: 2px;
+	direction: rtl;
+	text-align: right;
+	width: 100%;
+	left: 50%;
+	margin-left: -200px;
+	top: 50%;
+}
+
+.dialogDiv .dragHandle {
+	height: 25px;
+	width: 100%;
+	cursor: move;
+}
+
+.dialogDiv .close {
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: url("../images/buttons/close.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 16px;
+	height: 16px;
+	display: block;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.dialogDiv #dialogText {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #AD5312;
+	vertical-align: middle;
+}
+
+.dialogDiv #content {
+	margin: 10px;	
+}
+
+.dialogDiv .windowResize {
+	position: absolute;
+	right: 3px;
+	bottom: 5px;
+	cursor: se-resize;
+}
+
+.green .dialogDiv .dragHandle {
+	background-color: #FADD9B;
+}
+
+.green .dialogDiv {
+	border: #FBD57F 1px solid;
+	background-color: #FCEAC4;
+}
+
+/*.green .dialogDiv #content {
+	border:1px solid #C9E39C;	
+}*/
+
+.red .dialogDiv .dragHandle {
+	background-color: #FFA38F;
+}
+
+.red .dialogDiv {
+	border: #FDCEBF 1px solid;
+	background-color: #FFF2F4;
+}
+
+.blue .dialogDiv .dragHandle {
+	background-color: #6C99D2;
+}
+
+.blue .dialogDiv {
+	border: #DFE5E6 1px solid;
+	background-color: #F6FAFE;
+}
+
+.yellow .dialogDiv .dragHandle {
+	background-color: #F1850E;
+}
+
+.yellow .dialogDiv {
+	border: #FBB82D 1px solid;
+	background-color: #FEF09E;
+}
+
+
+.btnGetFicheFromBank , .btnSaveAndNew , .btnSave , .btnReturn {
+	width:109px ; 
+	height: 25px ; 
+	background-color:transparent;
+	border-style:none ;
+	cursor: pointer; 
+}
+
+.btnSave {
+	background-image: url('../images/buttons/saveBtn.png');
+}
+
+.btnSaveAndNew {
+	background-image: url('../images/buttons/saveNewBtn.png');
+}
+
+.btnReturn {
+	background-image: url('../images/buttons/backBtn.png');
+}

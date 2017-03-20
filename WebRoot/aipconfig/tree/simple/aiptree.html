@@ -1,0 +1,26 @@
+<head>
+	<link rel='stylesheet' type='text/css' href='aipconfig/tree/simple/aiptree-simple.css' />
+	<link rel='stylesheet' type='text/css' href='aipconfig/tree/simple/tree_xp_style_rtl.css' />
+	[JQUERYPLACEHOLDER]
+<!--	<script type="text/javascript" src="aipconfig/pagging/aippagging.js"></script>-->
+	<script type="text/javascript" src="aipconfig/tree/aiptree.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#[IDPLACEHOLDER]').SimpleTree({animate: false,autoclose:true
+				,success:function(){checkSelectedIds("[IDPLACEHOLDER]");}
+			});
+			checkSelectedIds("[IDPLACEHOLDER]");
+		});
+	</script>
+</head>
+
+<div  class="tree" id="[IDPLACEHOLDER]"  align="[ALIGNPLACEHOLDER]" style="padding-right: 10px;">
+<ul>
+<li class="root">[TITLEPLACEHOLDER]
+	[PLACEHOLDER]
+</li>
+</ul>
+<input type="hidden" id="selectedIds" value="[SELECTEDIDSPLACEHOLDER]">
+<input type="hidden" id="selectedNames" value="[SELECTEDNAMESPLACEHOLDER]">
+</div>

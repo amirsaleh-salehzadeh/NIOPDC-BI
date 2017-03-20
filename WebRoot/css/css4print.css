@@ -1,0 +1,117 @@
+@CHARSET "UTF-8";
+
+body {
+	font-size: 14px;
+	text-align:center;
+	font-family: arial,tahoma;
+}
+
+
+#prinArea {
+	width: 100%;
+}
+
+.label {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+#printBody {
+	border: 1px solid;
+}
+
+#stampLocation {
+	font-size: 14px;
+	width: 60%;
+	height: 80px;
+	border: 1px solid;
+}
+
+.data {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#printHead , #printFoot , #printBody{
+	width: 100%;
+}
+
+#printFoot {
+	font-size: 14px;
+}
+
+.dataTail {
+	width: 10%;	
+}
+/* 
+	margin-right: 60px;
+#reportTitle {
+	font-size: 20px;
+	font-weight:  bolder;	
+}
+#orderCosts , #orderFichesORCredits {
+	font-weight:  bolder;
+}
+
+.viewTitles {
+	font-size: 14px;
+	font-weight:  bold;	
+}
+
+.dataList th , th.dataList tr td 
+{
+	font-size: 12px;
+	background: gray;
+	color: black;
+	text-align: center;
+}
+
+td .dataList {
+	border: 0.25px solid gray;
+}
+
+.dataList table td  
+{
+	font-size: 12px;
+	color: black;
+	text-align: center;
+}
+
+td span {
+	font-size: 12px;
+	border-bottom-color: blue;
+	background-color: gray;	
+	font-size: 12px;	
+}
+
+.notShowElements4print {
+	visibility: hidden;
+}
+	.tab{
+		color: navy;
+		background-color: white;
+		border: thin solid navy;
+		position: absolute;
+		text-align: center;
+		font: 9pt Verdana,sans-serif;
+		z-index: 2;
+		padding: 3;
+	}
+	.panel{
+		position: absolute;
+		top: 32;
+		left: 10;
+		width: 95%;
+		z-index: 1;
+		height: 85%;
+		visibility: hidden;
+		font: 12pt Verdana,sans-serif;
+		color: navy;
+		border: thin solid navy;
+		padding: 0;
+		
+	}
+
+*/
+

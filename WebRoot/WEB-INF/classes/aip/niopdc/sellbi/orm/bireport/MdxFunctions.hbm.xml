@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="aip.common.bireport.bimdx.MDXFunctions" table="mdxfunction">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+         <property name="functionName" type="java.lang.String">
+            <column name="functionName"/>
+        </property>
+        <property name="functionDescriptor" type="java.lang.String">
+            <column name="functionValue"/>
+        </property>
+        <property name="syntax" type="java.lang.String">
+            <column name="syntax"/>
+        </property>
+	</class>
+   <sql-query name="sqlGetMdxFunctions">
+    <return class="aip.common.bireport.bimdx.MDXFunctions" lock-mode="read"></return>
+   		select * from mdxfunction where parentName=?
+   </sql-query>
+</hibernate-mapping>

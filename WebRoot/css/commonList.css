@@ -1,0 +1,82 @@
+@CHARSET "UTF-8";
+#ruleTitleText {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #16387C;
+	border-bottom: 1px solid #16387C;
+	line-height: 20px;
+}
+
+.forPrint {
+	border-top: 1px solid  #96C6ED;
+	border-right: 1px solid  #96C6ED;
+	margin: 5px auto;
+	border-collapse: collapse;
+}
+
+.forPrint tr th {
+	background-color: #f4f9fe;
+	text-align: center;
+	border-left: 1px solid  #96C6ED;
+	font: bold 14px "Century Gothic", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding-right: 5px;
+	color: #688498;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.forPrint tr td {
+	background-color: white;
+	border-bottom: 1px solid  #96C6ED;
+	border-left: 1px solid  #96C6ED;
+	padding: .3em 1em;
+	text-align: right;
+}
+
+.forPrintSub {
+	border-top: 1px solid #e5eff8;
+	border-right: 1px solid #e5eff8;
+	margin: 5px auto;
+	border-collapse: collapse;
+}
+
+.forPrintSub tr th {
+	background-color: #f4f9fe;
+	text-align: center;
+	border-left: 1px solid #e5eff8;
+	font: bold 16px "Century Gothic", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding-right: 5px;
+	color: #66a3d3;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.forPrintSub tr td {
+	border-bottom: 1px solid #e5eff8;
+	border-left: 1px solid #e5eff8;
+	padding: .3em 1em;
+	text-align: right;
+}
+
+
+.oddRows {
+	background-color: white;
+}
+
+.evenRows {
+	background-color: #F0F7FE;
+}
+
+.highlightYellow {
+	background-color: #FFFFD6;
+}
+
+.openSubList {
+	cursor: pointer;
+}
+
+
+.sortableColumn {
+	cursor: pointer;	
+}

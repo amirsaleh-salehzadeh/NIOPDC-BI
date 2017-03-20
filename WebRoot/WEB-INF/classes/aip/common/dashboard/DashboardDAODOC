@@ -1,0 +1,51 @@
+   public DashboardLST getDashboardLST(AIPWebUser user) throws AIPException
+   {     lst= new DashboardLST 
+         int userId= getUserUId(user)
+          for int i=1 to 9 
+               lst.ent(i) =  exec  spBIgetUserDashboards(userId,orderNo)
+               lst.webUser=user
+          return lst;           
+   
+   }
+   public DashboardENT saveDashboard(DashboardENT ent) throws AIPException
+  {         
+            set ent.userId and ent.groupId to null if 0;
+            if ent.userId is null and ent.groupId is null
+            {   if  fnSECUserHasRole(user.remoteUser,'definePublicDashboard')
+                     ent.save
+                else error کاربر مجاز به تعریف داشبورد عمومی نمی باشد
+            }
+           elseif (  ent.userId is null and ent.groupId  > 0  )
+           {    if  fnSECUserHasRole(user.remoteUser,'defineGroupDashboard')
+                  ent.save
+                  else error کاربر مجاز به تعریف داشبورد گروهی نمی باشد  
+           } 
+           elseif (  ent.userId > 0 and ent.groupId is null)
+           { if  fnSECUserHasRole(user.remoteUser,'definePersonalDashboard')
+                  ent.save
+             else error     کاربر مجاز به تعریف داشبورد شخصی نمی باشد
+           }
+           else error نوع داشبورد مشخص نشده است  
+                    
+       
+         if  error for uniqueness : oldENT=getDashboardENT(userName,groupId,dashboardNo);  select * from ... where .....
+                                                 oldENT.delete();
+                                                 saveDashboard( ent)   ;
+                  
+   }
+   public DashboardENT getDashboardENT(DashboardParam param ) throws AIPException;
+   {
+          int userId= getUserUId(param.webuser);
+          ent=new  DashboardENT;
+          ent=exec  spBIgetUserDashboards(userId,orderNo);
+   
+   }
+   public void deleteDashboard(AIPBaseDeleteParam param) throws AIPException;
+   
+   public GroupLST getUserDashboardComboLST(AIPWebUser user)throws AIPException;
+   {          lst=new GroupLST
+               if fnSECUserHasRole(user.remoteUser,'defineGroupDashboard')
+               lst.ent[] = spSECGetUserGroups;
+               return lst;                 
+   }
+NIOPDC_MRS_Ver4

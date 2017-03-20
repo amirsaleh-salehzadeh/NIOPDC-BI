@@ -1,0 +1,7 @@
+public Integer getUserId(AIPWebUser user){
+
+         int  id= select ID from scuser u where u.UserName=user.remoteUser   // 0 if it is null!
+         return id
+
+
+}

@@ -1,0 +1,61 @@
+public GroupLST getUserGroups(AIPWebUser user){
+    lst=new GroupLST;
+    lst=spSECgetUserGroups(user.remoteUser);
+     
+
+}
+public  ReportENT saveReport(ReportENT ent){
+   ent.createDate= getDate();
+   save reportENT and details and params!!!!!!
+}
+
+   public  ReportLST getVisualReports(ReportLSTParam param )  {**********************
+      
+        lst= new ReportLST;
+        lst.setFilter(param.getFilter());
+        lst.setTotalItems= spBIGetVisualReportsCount(param..........);
+        lst.setProperties(lst.gettotalItems,param.reqPage,param.pageSize);
+        lst.calcPagingParameters();
+        lst.setDtos=  spBIGetVisualReports(param..........);
+        return lst;
+   
+   } 
+   
+      
+   public  ReportLST getMDXReports(ReportLSTParam param )  {**********************
+   
+        lst= new ReportLST;
+        lst.setFilter(param.getFilter());
+        lst.setTotalItems= spBIGetMDXReportsCount(param..........);
+        lst.setProperties(lst.gettotalItems,param.reqPage,param.pageSize);
+        lst.calcPagingParameters();
+        lst.setDtos=  spBIGetMDXlReports(param..........);
+        return lst;
+ 
+   
+   }
+   public  ReportLST getAllReports(ReportLSTParam param ){**********************
+   
+        lst= new ReportLST;
+        lst.setFilter(param.getFilter());
+        lst.setTotalItems= spBIGetReportsCount(param..........);
+        lst.setProperties(lst.gettotalItems,param.reqPage,param.pageSize);
+        lst.calcPagingParameters();
+        lst.setDtos=  spBIGetReports(param..........);
+        return lst;
+ 
+   
+   }
+   
+      
+   public  void makePublic(AIPDefaultParam param)  {**********************
+        ReportENT ent= getReportENT(param);
+        ent.isPublic = true
+        ent.save 
+  
+  }
+   public  void makePrivate(AIPDefaultParam param){**********************
+        ReportENT ent= getReportENT(param);
+        ent.isPublic = false;
+        ent.save ;
+   }

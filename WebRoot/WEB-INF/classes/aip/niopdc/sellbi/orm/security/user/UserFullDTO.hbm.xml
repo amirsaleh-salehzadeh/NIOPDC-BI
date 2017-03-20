@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="aip.common.security.user.UserFullDTO" table="scuser" dynamic-insert="false" dynamic-update="false">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+         <property name="userName" type="java.lang.String">
+            <column name="UserName"/>
+        </property>
+        <property name="firstName" type="java.lang.String">
+            <column name="FirstName"/>
+        </property>
+        <property name="lastName" type="java.lang.String">
+            <column name="LastName"/>
+        </property>
+        <property name="nationalCode" type="java.lang.String">
+            <column name="NationalCode"/>
+        </property>        
+        <property name="identityNo" type="java.lang.String">
+            <column name="IdentityNo"/>
+        </property>   
+        <property name="startDate" type="java.lang.String">
+            <column name="StartDate"/>
+        </property>   
+        <property name="endDate" type="java.lang.String">
+            <column name="EndDate"/>
+        </property>
+        <property name="isApproved" type="java.lang.Boolean">
+            <column name="IsApproved"/>
+        </property>
+        <property name="mailAddress" type="java.lang.String">
+            <column name="MailAddress"/>
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="Address"/>
+        </property>        
+        <property name="description" type="java.lang.String">
+            <column name="Description"/>
+        </property>
+        <property name="phone" type="java.lang.String">
+            <column name="Phone"/>
+        </property>        
+        <property name="cellPhone" type="java.lang.String">
+            <column name="CellPhone"/>
+        </property> 
+		<property name="winUser" type="java.lang.String">
+            <column name="WinUser"/>
+        </property>
+		<property name="winPassword" type="java.lang.String">
+            <column name="WinPassword"/>
+        </property>          
+
+    </class>
+   <sql-query name="sqlGetUserFullDTO">
+   	<return class="aip.common.security.user.UserFullDTO" lock-mode="read">
+   	</return>
+   		select * from scuser u where u.ID = :userId
+   </sql-query>   
+   <sql-query name="sqlGetUserGroupIds">
+		select GROUP_CONCAT(ug.F_SCGroupID,',')
+		from scusergroup ug
+		where ug.UserName = :userName
+    </sql-query> 
+   <sql-query name="sqlGetUserRoleIds">
+		select GROUP_CONCAT(ur.F_SCRoleID,',')
+		from scuserrole ur
+		where ur.UserName = :userName
+    </sql-query> 
+    <sql-query name="sqlDelUserRoleIds">
+		delete from scuserrole ur
+		where ur.UserName = ?
+    </sql-query>
+    <sql-query name="sqlDelUserGroupIds">
+		delete from scusergroup ug
+		where ug.UserName = ?
+    </sql-query>          
+    <sql-query name="spSECGetUserRoleIdsWithGroupName" callable="true">
+     {call spSECGetUserRoleIdsWithGroupName(?)}
+    </sql-query>
+</hibernate-mapping>

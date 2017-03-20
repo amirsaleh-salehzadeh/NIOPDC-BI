@@ -1,0 +1,61 @@
+/* general */
+.bullet-blue-clear,.bullet-blue,.bullet-blue-title,.bullet-blue-selected,.bullet-blue-first,.bullet-blue-last,.bullet-blue-next,.bullet-blue-prev
+{
+	height: 20px;
+	width: 20px;
+	background-repeat: no-repeat;
+	text-align: center;
+	/*
+	display: table-cell;
+		*/
+	vertical-align: middle;
+	cursor: pointer;
+	color: navy;
+	font-size: 10;
+}
+.bullet-blue {
+	background-image: url("normal.gif");
+	color: navy;
+}
+.bullet-blue-title {
+	font-weight: bold;
+}
+.bullet-blue-selected {
+	background-image: url("selected.jpg");
+}
+.bullet-blue-first {
+	background-image: url("first.gif");
+}
+.bullet-blue-prev {
+	background-image: url("prev.gif");
+}
+.bullet-blue-next {
+	background-image: url("next.gif");
+}
+.bullet-blue-last {
+	background-image: url("last.gif");
+}
+.bullet-blue-clear img {
+	border: 0px;
+}
+.bullet-blue a:link , .bullet-blue a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+.bullet-bar a {
+	text-decoration: none;	
+}
+
+/*.bullet a:visited {
+	color: #000080;
+	border-bottom: 1px solid #000080;
+	text-decoration: none;
+}
+
+.bullet a:hover,a:focus {
+	color: #FF6600;
+	border-bottom: 1px solid #FF6600;
+	text-decoration: none;
+}*/
+

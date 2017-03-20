@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+
+  <form-beans >
+
+  </form-beans>
+
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+
+
+    <action path="/welcome" type="aip.niopdc.sellbi.struts.action.tiles.WelcomeAction">
+      <forward name="showWelcome" path="page.welcome" />
+    </action>
+ 	<action 
+	   	parameter="reqCode" 
+	   	path="/logOut" 
+	   	type="aip.niopdc.sellbi.struts.action.logOutAction" >
+	   	<forward name="showWelcome" path="page.welcome" />
+  	</action>
+    
+    <action path="/t_navigation" type="aip.niopdc.sellbi.struts.action.tiles.T_navigationAction">
+      <forward name="showNavigation" path="/layout/navigation.jsp" />
+    </action>
+
+    <action path="/t_customer" type="aip.niopdc.sellbi.struts.action.tiles.T_CustomerAction">
+      <forward name="show" path="page.customer" />
+    </action>
+
+  </action-mappings>
+
+  <message-resources parameter="aip.niopdc.sell.struts.ApplicationResources" />
+  
+</struts-config>
+

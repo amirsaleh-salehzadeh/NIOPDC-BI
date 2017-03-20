@@ -1,0 +1,37 @@
+.clsAIPTabbed tr td {
+	color: black;
+	font-weight: bold;
+}
+.clsAIPTabbed tr td.selectedTab {
+	color: yellow;
+	font-weight: bold;
+}
+
+.clsAIPTabbedRight tr td {
+	color: black;
+	font-weight: bold;
+}
+.clsAIPTabbedRight tr td.selectedTab {
+	color: yellow;
+	font-weight: bold;
+}
+
+.clsAIPTabbedBottom tr td {
+	color: black;
+	font-weight: bold;
+}
+.clsAIPTabbedBottom tr td.selectedTab {
+	color: yellow;
+	font-weight: bold;
+}
+
+
+.clsAIPTabbedTop tr td {
+	color: black;
+	font-weight: bold;
+}
+.clsAIPTabbedTop tr td.selectedTab {
+	color: yellow;
+	font-weight: bold;
+}
+

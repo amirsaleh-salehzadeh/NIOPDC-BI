@@ -1,0 +1,100 @@
+@CHARSET "UTF-8";
+.tree {
+	overflow: auto;
+	overflow-x:hidden; 
+	width: 500px;
+	height:300px;
+	/*border:1px solid #DFE5E6;*/
+	font: normal 11px tahoma, helvetica, sans-serif;
+	margin: 5;
+	direction: rtl;
+}
+.tree a
+{
+	color:#000;
+	text-decoration:none;
+}
+.tree li, .tree ul
+{
+	list-style: none;
+	/*background-color:#ffffff;*/
+	direction: rtl;
+	text-align: right;
+}
+.tree li
+{
+	padding:0px 32px 0px 0px;
+	line-height:17px;
+	margin: 0;
+	cursor: default;
+	white-space: nowrap;
+}
+.tree ul
+{
+	direction: rtl;
+	margin:0 -13px 0 0;
+	padding:0;
+}
+.tree li.leaf
+{
+	background: url(images/leaf.gif) no-repeat right 0;
+}
+.tree li.leaf-last
+{
+	background: url(images/leaf-last.gif) no-repeat right 0;
+}
+
+.tree .folder-close
+{
+	background: url(images/expandable.gif) no-repeat right 0;
+}
+.tree .folder-close-last
+{
+	background: url(images/expandable-last.gif) no-repeat right 0;
+}
+.tree .folder-open
+{
+	background: url(images/collapsable.gif) no-repeat right 0;
+}
+.tree .folder-open-last
+{
+	background: url(images/collapsable-last.gif) no-repeat right 0;
+}
+.tree #rootSpan{
+	/*background: url(images/root.gif) no-repeat right 0;*/
+	font-weight: bold;
+	font-size: 12px;
+	color: navy;
+}
+.tree .toggler
+{
+	float:right;
+	margin-right:-34px;
+	height:16px;
+	width:32px;
+	background-image:url(images/spacer.gif);
+	cursor:pointer;
+}
+.tree ul.ajax
+{
+	background: url(images/spinner.gif) no-repeat 0 0;
+	height: 16px;
+}
+.tree ul.ajax li
+{
+	display:none;
+}
+.tree .text{
+	font-weight: normal;
+	font-size: 12px;
+	color: navy;
+}
+.tree .active{
+	/*background-color:#F7BE77;*/
+	/*padding:1px 2px;*/
+	/*border: 1px dashed #444;*/
+	background-color: #F9F160;
+	font-weight: normal;
+	font-size: 12px;
+	color: navy;
+}

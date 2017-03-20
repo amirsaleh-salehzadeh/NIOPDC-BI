@@ -1,0 +1,66 @@
+@CHARSET "UTF8";
+/* Rounded Tables */
+.rr_ORANGE {
+	margin: 0px;
+	padding: 0px;
+	direction: rtl;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.rr_ORANGE .rr_ORANGE_top_right {
+	background-image: url(rr_ORANGE_top_left.png);
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 20px;
+}
+
+.rr_ORANGE .rr_ORANGE_top_top {
+	background-image: url(rr_ORANGE_top_top.png);
+	background-repeat: repeat-x;
+	height: 20px;
+}
+
+.rr_ORANGE .rr_ORANGE_top_left {
+	background-image: url(rr_ORANGE_top_right.png);
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 20px;
+}
+
+.rr_ORANGE .rr_ORANGE_right_right {
+	background-image: url(rr_ORANGE_left_left.png);
+	background-repeat: repeat-y;
+	width: 20px;
+}
+
+.rr_ORANGE .rr_ORANGE_center {
+	background-image: url(rr_ORANGE_center_center.png);
+	background-repeat: repeat;
+}
+
+.rr_ORANGE .rr_ORANGE_left_left {
+	background-image: url(rr_ORANGE_right_right.png);
+	background-repeat: repeat-y;
+	width: 20px;
+}
+
+.rr_ORANGE .rr_ORANGE_bottom_right {
+	background-image: url(rr_ORANGE_bottom_left.png);
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 20px;
+}
+
+.rr_ORANGE .rr_ORANGE_bottom_bottom {
+	background-image: url(rr_ORANGE_bottom_bottom.png);
+	background-repeat: repeat-x;
+	height: 20px;
+}
+
+.rr_ORANGE .rr_ORANGE_bottom_left {
+	background-image: url(rr_ORANGE_bottom_right.png);
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 20px;
+}
+

@@ -1,0 +1,76 @@
+/* general */
+.bullet-bar-clear , .bullet-bar , .bullet-bar-title , .bullet-bar-selected , .bullet-bar-first , .bullet-bar-last ,
+.bullet-bar-next , .bullet-bar-prev , .bullet-bar-start , .bullet-bar-end
+{
+	height: 34px;
+	width: 15px;
+	background-repeat: no-repeat;
+	/*line-height: 50px;*/
+	text-align:center;
+	/*
+	display: table-cell;
+		*/
+	vertical-align: bottom;
+	cursor: pointer;
+	color: navy;
+	font-size: 11;
+}
+.bullet-bar {
+	background-image: url("normal.png");
+	color: navy;
+}
+.bullet-bar-title {
+	font-weight: bold;
+}
+.bullet-bar-start {
+	background-image: url("start.png");
+	width:34px;
+	height: 31px;
+}
+.bullet-bar-end {
+	background-image: url("end.png");
+}
+.bullet-bar-selected {
+	background-image: url("selected.png");
+	color: red;
+}
+.bullet-bar-selected a {
+	color: #FF6600;
+	font-size: 12;
+	font-weight: bold;
+}
+.bullet-bar-first {
+	background-image: url("first.png");
+	vertical-align: middle;
+}
+.bullet-bar-prev {
+	background-image: url("prev.png");
+	vertical-align: middle;
+}
+.bullet-bar-next {
+	background-image: url("next.png");
+	vertical-align: middle;
+}
+.bullet-bar-last {
+	background-image: url("last.png");
+	vertical-align: middle;
+}
+.bullet-bar-clear img {
+	border: 0px;
+}
+.bullet-bar a:link,.bullet-bar a:visited {
+	color: blue;
+	text-decoration: none;
+}
+/*.bullet a:visited {
+	color: #000080;
+	border-bottom: 1px solid #000080;
+	text-decoration: none;
+}
+
+.bullet a:hover,a:focus {
+	color: #FF6600;
+	border-bottom: 1px solid #FF6600;
+	text-decoration: none;
+}*/
+

@@ -1,0 +1,71 @@
+/* general */
+.tree-simple-clear,.tree-simple,.tree-simple-title,.tree-simple-selected,.tree-simple-first,.tree-simple-last,.tree-simple-next,.tree-simple-prev,.tree-simple-start,.tree-simple-end
+{
+	height: 34px;
+	width: 15px;
+	background-repeat: no-repeat;
+	/*line-height: 50px;*/
+	text-align:center;
+	/*
+	display: table-cell;
+		*/
+	vertical-align: bottom;
+	cursor: pointer;
+	color: navy;
+	font-size: 10px;
+}
+.tree-simple {
+	background-image: url("normal.png");
+	color: navy;
+}
+.tree-simple-title {
+	font-weight: bold;
+}
+.tree-simple-start {
+	background-image: url("start.png");
+	width:34px;
+	height: 31px;
+}
+.tree-simple-end {
+	background-image: url("end.png");
+}
+.tree-simple-selected {
+	background-image: url("selected.png");
+	color: red;
+}
+.tree-simple-first {
+	background-image: url("first.png");
+	vertical-align: middle;
+}
+.tree-simple-prev {
+	background-image: url("prev.png");
+	vertical-align: middle;
+}
+.tree-simple-next {
+	background-image: url("next.png");
+	vertical-align: middle;
+}
+.tree-simple-last {
+	background-image: url("last.png");
+	vertical-align: middle;
+}
+.tree-simple-clear img {
+	border: 0px;
+}
+
+.tree-simple a:link,.tree-simple a:visited {
+	color: blue;
+	text-decoration: none;
+}
+/*.bullet a:visited {
+	color: #000080;
+	border-bottom: 1px solid #000080;
+	text-decoration: none;
+}
+
+.bullet a:hover,a:focus {
+	color: #FF6600;
+	border-bottom: 1px solid #FF6600;
+	text-decoration: none;
+}*/
+

@@ -1,0 +1,58 @@
+/* general */
+.paggingTable{
+}
+.bullet-gray-clear,.bullet-gray,.bullet-gray-title,.bullet-gray-selected,.bullet-gray-first,.bullet-gray-last,.bullet-gray-next,.bullet-gray-prev
+{
+	height: 20px;
+	width: 20px;
+	background-repeat: no-repeat;
+	text-align: center;
+	/*
+	display: table-cell;
+		*/
+	vertical-align: middle;
+	cursor: pointer;
+	color: navy;
+	font-size: 10px;
+}
+.bullet-gray {
+	background-image: url("normal.gif");
+	color: white;
+}
+.bullet-gray-title {
+	font-weight: bold;
+}
+.bullet-gray-selected {
+	background-image: url("selected.gif");
+}
+.bullet-gray-first {
+	background-image: url("first.png");
+}
+.bullet-gray-prev {
+	background-image: url("prev.png");
+}
+.bullet-gray-next {
+	background-image: url("next.png");
+}
+.bullet-gray-last {
+	background-image: url("last.png");
+}
+.bullet-gray-clear img {
+	border: 0px;
+}
+.bullet-gray a:link,.bullet-gray a:visited {
+	color: white;
+	text-decoration: none;
+}
+/*.bullet a:visited {
+	color: #000080;
+	border-bottom: 1px solid #000080;
+	text-decoration: none;
+}
+
+.bullet a:hover,a:focus {
+	color: #FF6600;
+	border-bottom: 1px solid #FF6600;
+	text-decoration: none;
+}*/
+

@@ -1,0 +1,74 @@
+ public GroupLST getGroupLST(GroupLSTParam param) throws AIPException
+ {       // with paging  
+        lst= new GroupLST;
+        lst.setFilter(param.getFilter());
+        lst.setTotalItems= spSECGetGroupsCount(param.filter);
+        lst.setProperties(lst.gettotalItems,param.reqPage,param.pageSize);
+        lst.calcPagingParameters();
+        param.sortedByField= resetSortedByField(param);
+        lst.setDtos=  exec spSECGetGroups(param............ )
+        return lst;
+ } 
+ 
+ 
+ 
+    public void deleteUserGroup(AIPBaseDeleteParam param) throws AIPException
+    {   if param.id > 0 then delete from scgroup where ID=param.id;
+        if param.ids <> null
+        {    ids[] =split ids
+             for each ids delete from scgroup where ID=ids;
+        }   
+       if param.criteria <> null
+       {    delete from scgroup where criteria  
+              }           
+    }
+    
+    public GroupDTO getGroupDTO(AIPDefaultDTOParam param) throws AIPException
+    
+    
+    public GroupComboLST getGroupComboLST(AIPWebUser user) throws AIPException\
+    {     comboLST = new GroupComboLST;
+          roleDTOs[] =   select  ID,RoleName,FarsiName from scrole
+          
+          ssasRoleDTOs=getSSASRolesDTOs();
+          //set all 
+          return comboLST
+          
+          // they are used as a list in the UI
+    }
+    public GroupDTO saveGroup(GroupDTO dto) throws AIPException
+    {     
+          save(dto.ent);   
+          syncGroupRoleIds(dto.ent.id,dto.selectedRoleIds);
+          syncGroupSSASRoleIds(dto.ent.id,ssasSelectedRoleIds);
+          syncUIRoles(dto.ent.id);    /// for each user in the group!
+          
+    }
+    
+    
+   private  void syncGroupRoleIds(Integer groupId,String UserRoleIds)
+    {}
+    
+    private  void syncgrouprSSASRoleIds(Integer groupId,String SSASRoleIds)
+    {}
+    
+    
+    private void syncUIRoles(int  groupId)
+    {
+        // it is done in LawSystem 
+       select distinct u.ID
+       from scusergroup  
+        inner join scuser u
+        ON ug.F_SCUserID=u.ID
+        Where F_SCGroupId=groupId; 
+        for each userId[i ]         syncUserUIRoles(userId);       
+    
+    }
+    
+    private vois synUserUIRoles(int userId)
+   {
+      // from scuserallroles : add new roles and delete not valid roles
+      spSECGetUserAllRoleIds   // laws used in webservice
+      spSECGetUserRoles         //  updated roles 
+   }    
+    

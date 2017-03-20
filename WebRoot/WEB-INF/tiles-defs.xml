@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+"http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	<!-- Base Tiles Definition -->
+	<definition name="base.definition" path="/layout/siteLayout.jsp">
+		<put name="header" value="/layout/header.jsp" />
+		<put name="menu" value="/layout/menu.jsp" />
+		<put name="banner" value="/layout/banner.jsp" />
+		<put name="navigation" value="/t_navigation.do" />
+		<put name="footer" value="/layout/footer.jsp" />
+	</definition>
+	<!-- welcome page -->
+	<definition name="page.welcome" extends="base.definition">
+		<put name="title" value="صفحه اصلی" />
+		<put name="body" value="/layout/index.jsp" />
+	</definition>
+	
+	<!-- customer -->
+	<definition name="page.customer" extends="base.definition">
+		<put name="title" value="گزارش مشتری" />
+		<put name="body" value="/testpage.jsp?query=testquery" />
+	</definition>
+
+	<!-- login -->
+	<definition name="page.login" extends="base.definition">
+		<put name="title" value="ورود به سیستم" />
+		<put name="body" value="/login.jsp" />
+	</definition>
+
+
+	<definition name="page.dailySale" extends="base.definition">
+		<put name="title" value="فروش روزانه" />
+		<put name="body" value="/dailySale.do" />
+	</definition>
+
+	<definition name="page.customerSale" extends="base.definition">
+		<put name="title" value="فروش هر مشتری" />
+		<put name="body" value="/customerSale.do" />
+	</definition>
+
+
+	<definition name="page.customerList" extends="base.definition">
+		<put name="title" value="فروش هر مشتری" />
+		<put name="body" value="/customerList.do" />
+	</definition>
+
+
+	<definition name="page.customerQuota" extends="base.definition">
+		<put name="title" value="سهمیه مشتریان ناحیه" />
+		<put name="body" value="/customerQuota.do" />
+	</definition>
+
+	<definition name="page.sellStatistics" extends="base.definition">
+		<put name="title" value="آمار فروش" />
+		<put name="body" value="/sellStatistics.do" />
+	</definition>
+
+	<definition name="page.productSale" extends="base.definition">
+		<put name="title" value="فروش هر فرآورده" />
+		<put name="body" value="/productSale.do" />
+	</definition>
+
+	<definition name="page.customerTurnover" extends="base.definition">
+		<put name="title" value="گردش مشتری" />
+		<put name="body" value="/customerTurnover.do" />
+	</definition>
+
+	<definition name="page.recConfirm" extends="base.definition">
+		<put name="title" value="فرم اعلام وصول مصرف کنندگان عمده" />
+		<put name="body" value="/recConfirm.do" />
+	</definition>
+
+	<!-- Order -->
+	<definition name="page.orderlist" extends="base.definition">
+		<put name="title" value="لیست حواله ها" />
+		<put name="body" value="/orderList.do" />
+	</definition>
+
+	<!-- bankAccount -->
+	<definition name="page.bankAccount" extends="base.definition">
+		<put name="title" value="حساب های بانکی شرکت پخش" />
+		<put name="body" value="/bankAccount.do" />
+	</definition>
+
+
+	<!-- orderfiche -->
+	<definition name="page.orderfiche" extends="base.definition">
+		<put name="title" value="استعلام فیش بانکی" />
+		<put name="body" value="/orderfiche.do" />
+	</definition>
+	<!-- orderpursuit -->
+	<definition name="page.orderpursuit" extends="base.definition">
+		<put name="title" value="پیگیری حواله مشتری" />
+		<put name="body" value="/orderpursuit.do" />
+	</definition>
+	<!-- fiche -->
+	<definition name="page.fiche" extends="base.definition">
+		<put name="title" value="لیست پرداخت های نقدی مشتری" />
+		<put name="body" value="/fiche.do" />
+	</definition>
+	<!-- credit -->
+	<definition name="page.credit" extends="base.definition">
+		<put name="title" value="لیست اعتبارات اختصاصی مشتری" />
+		<put name="body" value="/credit.do" />
+	</definition>
+	<!-- costtype -->
+	<definition name="page.costtype" extends="base.definition">
+		<put name="title" value="جدول هزینه ها" />
+		<put name="body" value="/costtype.do" />
+	</definition>
+	<!-- bankTransactions -->
+	<definition name="page.bankTransactions" extends="base.definition">
+		<put name="title" value="" />
+		<put name="body" value="/bankTransactions.do" />
+	</definition>
+	<!-- user -->
+	<definition name="page.user" extends="base.definition">
+		<put name="title" value="لیست کاربران" />
+		<put name="body" value="/user.do" />
+	</definition>
+	<!-- userpermission -->
+	<definition name="page.userpermission" extends="base.definition">
+		<put name="title" value="صدور مجوز خرید مشتری" />
+		<put name="body" value="/userpermission.do" />
+	</definition>
+	<!-- usergroup -->
+	<definition name="page.usergroup" extends="base.definition">
+		<put name="title" value="usergroup" />
+		<put name="body" value="/usergroup.do" />
+	</definition>
+	<!-- group -->
+	<definition name="page.group" extends="base.definition">
+		<put name="title" value="group" />
+		<put name="body" value="/group.do" />
+	</definition>
+	<!-- agentLocation -->
+	<definition name="page.agentLocation" extends="base.definition">
+		<put name="title" value="ناحیه های عاملین فروش" />
+		<put name="body" value="/agentLocation.do" />
+	</definition>
+
+	<definition name="page.changepassword" extends="base.definition">
+		<put name="title" value="تغییر کلمه عبور" />
+		<put name="body" value="/changepassword.do" />
+	</definition>
+	<definition name="page.changepassword_succed" extends="base.definition">
+		<put name="title" value="تغییر کلمه عبور" />
+		<put name="body" value="/form/security/user/changepassword_succeed.jsp" />
+	</definition>
+	<definition name="page.aipLog" extends="base.definition">
+		<put name="title" value="System Log" />
+		<put name="body" value="/aipLog.do" />
+	</definition>
+	
+	<definition name="page.nioLog" extends="base.definition">
+		<put name="title" value="System Log" />
+		<put name="body" value="/nioLog.do" />
+	</definition>
+	
+	
+</tiles-definitions>

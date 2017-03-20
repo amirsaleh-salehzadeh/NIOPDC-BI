@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+
+		<link rel="shortcut icon" href="aip-co.ico">
+		<link rel="icon" type="image/ico" href="aip-co.ico">
+		<link href="/AIPNIOPDCSellBI/css/dialogStyles.css" type="text/css" rel="stylesheet" />
+		<link href="/AIPNIOPDCSellBI/css/niopdc.css" type="text/css" rel="stylesheet" />
+        <link href="/AIPNIOPDCSellBI/css/popupStyles.css" rel="stylesheet" type="text/css"/>
+		<link href="/AIPNIOPDCSellBI/css/navigation.css" rel="stylesheet" type="text/css" >
+		<link href="/AIPNIOPDCSellBI/css/menu.css" rel="stylesheet" type="text/css" >
+	
+		<script src="/AIPNIOPDCSellBI/js/common/jquery-1.2.6.pack.js" type="text/javascript"></script>
+		<script src="/AIPNIOPDCSellBI/js/common/aip.niopdc.common.js" type="text/javascript"></script>			
+		<script src="/AIPNIOPDCSellBI/js/common/aip.niopdc.menu.js" type="text/javascript"></script>
+		<script src="/AIPNIOPDCSellBI/js/security/group.list.js" type="text/javascript"></script>
+		
+		
+		<script type="text/javascript">
+		
+			$(document).ready(
+			function(){
+			showhideNavigation();
+				$(".jspinclude").each(function(i){
+					var idd=this.id;
+					//alert(idd);
+					try{
+					$.get(this.title,function(data){
+						$('#'+idd).html( data );
+						try{
+							if(idd==='layout_menu_jsp'){
+								var cssRule;
+								var newSelector;
+								for (var i = 0; i < document.styleSheets.length; i++)
+									try{
+									for (var x = 0; x < document.styleSheets[i].rules.length ; x++)
+										{
+										cssRule = document.styleSheets[i].rules[x];
+										if (cssRule.selectorText.indexOf("LI:hover") != -1)
+										{
+											 newSelector = cssRule.selectorText.replace(/LI:hover/gi, "LI.iehover");
+											document.styleSheets[i].addRule(newSelector , cssRule.style.cssText);
+										}
+									}
+									}catch(e3){}
+								
+								var getElm = document.getElementById("nav").getElementsByTagName("LI");
+								for (var i=0; i<getElm.length; i++) {
+									getElm[i].onmouseover=function() {
+										this.className+=" iehover";
+									}
+									getElm[i].onmouseout=function() {
+										this.className=this.className.replace(new RegExp(" iehover\\b"), "");
+									}
+								}
+							}
+						}catch(e2){
+							//...
+							//alert(e2);
+						}
+					});
+					}catch(e){
+						//...
+							alert(e);
+					}
+				});				
+			}
+			);
+		
+		</script>
+		
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="/AIPNIOPDCSellBI/jpivot/table/mdxtable.css">
+  <link rel="stylesheet" type="text/css" href="/AIPNIOPDCSellBI/jpivot/navi/mdxnavi.css">
+  <link rel="stylesheet" type="text/css" href="/AIPNIOPDCSellBI/wcf/form/xform.css">
+  <link rel="stylesheet" type="text/css" href="/AIPNIOPDCSellBI/wcf/table/xtable.css">
+  <link rel="stylesheet" type="text/css" href="/AIPNIOPDCSellBI/wcf/tree/xtree.css">
+
+</head>
+
+<body dir="rtl" background="images/background/background.png" id="pageLayout" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+	<table border="0" width="100%" cellspacing="0" align="center" cellpadding="0">
+		<tr align="center">
+			<td colspan="2" >
+<!--				<jsp:include page="/layout/header.jsp"></jsp:include>-->
+				<div title="/AIPNIOPDCSellBI/layout/header.jsp" id="layout_header_jsp" class="jspinclude"></div>
+				
+			</td>
+		</tr>
+		<tr align="center"> 
+			<td colspan="2" >
+<!--				<jsp:include page="/layout/menu.jsp"></jsp:include>-->
+					<div title="/AIPNIOPDCSellBI/layout/menu.jsp" id="layout_menu_jsp" class="jspinclude"></div>
+			</td>
+		</tr>
+		<tr align="center">
+			<td colspan="2">
+<!--				<jsp:include page="/layout/banner.jsp"></jsp:include>-->
+					<div title="/AIPNIOPDCSellBI/layout/banner.jsp" id="layout_banner_jsp" class="jspinclude"></div>
+			</td>
+		</tr>
+		<tr align="center">
+			<td valign="top" style="padding-right: 0px; " align="right">
+<!--				<jsp:include page="/layout/navigation.jsp"></jsp:include>-->
+				<div title="/AIPNIOPDCSellBI/layout/navigation.jsp" id="layout_navigation_jsp" class="jspinclude"></div>
+			</td>
+			<td width="100%" valign="top">
+				
+
+    
+    	[PLACEHOLDER]
+    	
+    	
+				</td>
+			</tr>
+			<tr align="center">
+				<td colspan="2">
+<!--					<jsp:include page="/layout/footer.jsp"></jsp:include>-->
+					<div title="/AIPNIOPDCSellBI/layout/footer.jsp" id="layout_footer_jsp" class="jspinclude"></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

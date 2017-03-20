@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+
+  <form-beans >
+
+  	<form-bean name="mdxReportForm" type="aip.niopdc.sellbi.struts.form.MDXReportForm" />
+    <form-bean name="saletrendinlocation1Form" type="aip.niopdc.sellbi.struts.form.Saletrendinlocation1Form" />
+  	<form-bean name="visualReportForm" type="aip.niopdc.sellbi.struts.form.visual.VisualReportForm" />
+  	<form-bean name="visualReport1Form" type="aip.niopdc.sellbi.struts.form.visual.VisualReport1Form" />
+    <form-bean name="mmmForm" type="aip.niopdc.sellbi.struts.form.MmmForm" />
+    <form-bean name="test100Form" type="aip.niopdc.sellbi.struts.form.Test100Form" />
+    <form-bean name="groupForm" type="aip.niopdc.sellbi.struts.form.group.GroupForm" />
+    <form-bean name="userForm" type="aip.niopdc.sellbi.struts.form.user.UserForm" />
+  
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="Test"
+      name="Test"
+      path="/test"
+      scope="request"
+      type="aip.niopdc.sellbi.struts.action.TestAction" />
+    <action
+      attribute="saletrendinlocation1Form"
+      input="/sale_trend_in_location1.jsp"
+      name="saletrendinlocation1Form"
+      path="/saletrendinlocation1"
+      scope="request"
+      type="aip.niopdc.sellbi.struts.action.Saletrendinlocation1Action"
+      validate="false">
+      <forward name="view" path="/sale_trend_in_location1.jsp" />
+    </action>
+
+    <action path="/mdxreport" type="aip.niopdc.sellbi.struts.action.mdx.MDXReportAction"
+    		attribute="mdxReportForm" name="mdxReportForm" 
+			parameter="reqCode"
+			input="/jsp/mdxreportlist.jsp"
+			scope="request">
+		<forward name="list" path="/jsp/mdxreportlist.jsp" />
+		<forward name="edit" path="/jsp/mdxreportedit.jsp" />
+    </action>
+    
+    <action path="/visualreport" type="aip.niopdc.sellbi.struts.action.visual.VisualReportAction"
+    		attribute="visualReportForm" name="visualReportForm" 
+			parameter="reqCode"
+			input="/jsp/visualreportlist.jsp"
+			scope="request">
+		<forward name="list" path="/jsp/visual/visualreportlist.jsp" />
+		<forward name="edit" path="/jsp/visual/visualreportedit.jsp" />
+		<forward name="save" path="/jsp/visual/visualreportedit.jsp" />
+    </action>
+    <action path="/visualreport2" type="aip.niopdc.sellbi.struts.action.visual.VisualReport1Action"
+    		attribute="visualReport1Form" name="visualReport1Form" 
+			parameter="reqCode"
+			input="/jsp/visual/visualreport1list.jsp"
+			scope="request">
+		<forward name="list" path="/jsp/visual/visualreport1list.jsp" />
+		<forward name="edit" path="/jsp/visual/visualreportedit.jsp" />
+		<forward name="save" path="/jsp/visual/visualreportedit.jsp" />
+    </action>
+    
+    <action path="/aipjsf" type="aip.niopdc.sellbi.struts.action.AIPJSFAction" />
+    <action path="/dimensions" type="aip.niopdc.sellbi.struts.action.DimensionsAction" />
+    <action path="/members" type="aip.niopdc.sellbi.struts.action.MembersAction" />
+    <action path="/members2" type="aip.niopdc.sellbi.struts.action.Members2Action" />
+    <action path="/dimensions2" type="aip.niopdc.sellbi.struts.action.Dimensions2Action" />
+    <action path="/memberswithcheck" type="aip.niopdc.sellbi.struts.action.MembersWithCheckAction" />
+    <action path="/cubemeta" type="aip.niopdc.sellbi.struts.action.CubeMetaAction" />
+    
+    <action
+      attribute="groupForm"
+      input="/form/group/groupEdit.jsp"
+      name="groupForm"
+      parameter="reqCode"
+      path="/group"
+      scope="request"
+      type="aip.niopdc.sellbi.struts.action.group.GroupAction">
+      <forward name="list" path="/form/group/groupList.jsp" />
+      <forward name="edit" path="/form/group/groupEdit.jsp" />
+      <forward name="userList" path="/form/group/groupUserLists.jsp" />
+      
+      
+    </action>
+    <action
+      attribute="userForm"
+      input="/form/user/userList.jsp"
+      name="userForm"
+      path="/user"
+      scope="request"
+      type="aip.niopdc.sellbi.struts.action.UserAction">
+      <forward name="list" path="/form/user/userList.jsp" />
+      <forward name="edit" path="/form/user/userEdit.jsp" />
+      <forward name="grouplist" path="/form/user/userGroupAndRoleJustList.jsp" />
+      <forward name="ssas" path="/form/user/userSSASRoles.jsp" />
+    </action>
+    <action
+      parameter="reqCode"
+      path="/aipbimdx"
+      type="aip.niopdc.sellbi.struts.action.AipbimdxAction" />
+      
+      
+    
+    <action 
+	   	parameter="reqCode" 
+	   	path="/navigation" 
+	   	type="aip.niopdc.sellbi.struts.action.NavigationAction" >
+	   	
+  	</action>
+  	
+    <action 
+	   	parameter="reqCode" 
+	   	path="/mdxFunctions" 
+	   	type="aip.niopdc.sellbi.struts.action.MdxFunctionsAction" >
+	   	
+  	</action>
+   
+  </action-mappings>
+
+  <controller  processorClass="org.apache.struts.tiles.TilesRequestProcessor" bufferSize="4096" />
+
+  <message-resources parameter="aip.niopdc.sell.struts.ApplicationResources" />
+  
+  <plug-in className="org.apache.struts.tiles.TilesPlugin">
+	<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+	<set-property property="moduleAware" value="true" />
+	<set-property property="definitions-parser-validate" value="true" />
+  </plug-in>
+  
+</struts-config>
+

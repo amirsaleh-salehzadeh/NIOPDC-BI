@@ -1,0 +1,56 @@
+/* general */
+.bullet-green-clear,.bullet-green,.bullet-green-title,.bullet-green-selected,.bullet-green-first,.bullet-green-last,.bullet-green-next,.bullet-green-prev
+{
+	height: 20px;
+	width: 20px;
+	background-repeat: no-repeat;
+	text-align: center;
+	/*
+	display: table-cell;
+		*/
+	vertical-align: middle;
+	cursor: pointer;
+	color: navy;
+	font-size: 10;
+}
+.bullet-green {
+	background-image: url("amr/normal.gif");
+	color: blue;
+}
+.bullet-green-title {
+	font-weight: bold;
+}
+.bullet-green-selected {
+	background-image: url("amr/selected.gif");
+}
+.bullet-green-first {
+	background-image: url("amr/rright.gif");
+}
+.bullet-green-prev {
+	background-image: url("amr/right.gif");
+}
+.bullet-green-next {
+	background-image: url("amr/left.gif");
+}
+.bullet-green-last {
+	background-image: url("amr/llast.gif");
+}
+.bullet-green-clear img {
+	border: 0px;
+}
+.bullet-green a:link,.bullet-green a:visited {
+	color: white;
+	text-decoration: none;
+}
+/*.bullet a:visited {
+	color: #000080;
+	border-bottom: 1px solid #000080;
+	text-decoration: none;
+}
+
+.bullet a:hover,a:focus {
+	color: #FF6600;
+	border-bottom: 1px solid #FF6600;
+	text-decoration: none;
+}*/
+

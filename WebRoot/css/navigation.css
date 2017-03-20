@@ -1,0 +1,52 @@
+td, tr, p, div {
+  font-family      			: Tahoma;
+  font-size        			: 11px;
+  color           			: #333333;
+}
+
+a.mainlevel:link, a.mainlevel:visited {
+	color					: white;
+	display					: block;
+	background-position		: right;
+	text-align				: right;
+	font-weight				: bold;
+	background-image		: url(../images/navigation/key.png);
+	background-repeat		: no-repeat;
+	height					: 30px;
+	padding-right			: 30px;
+	padding-top				: 8px;
+	margin-top				: -7px!important;
+	margin-top				: 0px;
+}
+
+a.mainlevel:hover {
+	color					: #FEC002;
+	background-position		: right;
+	background-image		: url(../images/navigation/over.png);
+}
+
+
+a:link, a:visited {
+  font-size        			: 11px;
+  color			            : #000000;
+  text-decoration			: none;
+  font-family      			: Tahoma;
+}
+
+a:hover {
+  color            			: #FEC002;
+  text-decoration  			: none;
+}
+
+li { 
+	list-style				: none!important;
+	line-height				: 180%;
+}
+
+#navigationDIV {
+	width: 179px;	
+	position: fixed;
+	margin-right: -185px;
+	/*
+	*/
+}

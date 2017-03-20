@@ -1,0 +1,152 @@
+    public UserLST getUserLST(UserLSTParam param) throws AIPException
+    { 
+        lst= new UserLST;
+        lst.setFilter(param.getFilter());
+        lst.setTotalItems= spSECGetUsersCount(param.filter,param.groupId);
+        lst.setProperties(lst.gettotalItems,param.reqPage,param.pageSize);
+        lst.calcPagingParameters();
+        param.sortedByField= resetSortedByField(param);
+        lst.setDtos=  exec spSECGetUsers(param............ )
+        lst.setGroupId=param.getGroupId;
+        return lst;   
+          
+     }
+     
+	
+	public PersonLST getPersonLST(PersonLSTParam param)  throws AIPException{
+	
+	 { 
+        lst= new PersonLST;
+        lst.setFilter(param.getFilter());
+        lst.setTotalItems= spSECGetPersonsCount(param.filter);
+        lst.setProperties(lst.gettotalItems,param.reqPage,param.pageSize);
+        lst.calcPagingParameters();
+        param.sortedByField= resetSortedByField(param);
+        lst.setDtos=  exec spSECGetPersons(param............ )
+        return lst;   
+          
+     }
+     
+	}
+	
+	
+    public void deleteUserUser(AIPBaseDeleteParam param) throws AIPException
+    {
+             // same as others 
+    }
+    
+     public UserFullDTO getUserFullDTO(AIPDefaultDTOParam param) throws AIPException
+    {         dto= UserFullDTO;
+               select p.FirstName,p.LastName,p.NationalCode,p.IdentityNo,
+		       u.Address,u.CellPhone,u.Description,u.ID,u.IsApproved,u.MailAddress,
+		       u.StartDate,u.EndDate,u.UserName,u.F_CMPersonID,u.Phone 
+		       from cmperson p
+		       inner join scuser u
+		       on p.ID=u.F_CMPersonID
+		       where u.ID=param.ID
+		       
+		       dto.userGroupIds= getUserGroupIds(param.Id);
+		       dto.userRoleIds=getUserRoleIds(param.id);
+		       dto.userSSASRoleIds=getuserSSASRoleIds(param.Id)
+		       dto.webUser=param.webUser;
+		       return dto;
+    }
+    
+     public UserForSaveENT getUserForSaveENT(AIPDefaultDTOParam param) throws AIPException
+     {
+            ent=new userForSaveENT;
+            ent.userENT= select * from scuser where ID=param.id;
+            ent.personENT=select * from cmperson where ID=ent.userENT.personId;
+            
+            ent.userGroupIds= getUserGroupIds(param.Id);
+		    ent.userRoleIds=getUserRoleIds(param.id);
+		    ent.userSSASRoleIds=getuserSSASRoleIds(param.Id)
+		    return ent;
+		    ent.webUser=param.webUser;
+     
+     }
+    
+    
+    public UserComboLST getUserComboLST(AIPWebUser user) throws AIPException
+    {
+           
+    }
+    public UserForSaveENT saveUser(UserForSaveENT  ent)) throws AIPException
+    {    ent.userPassword = encrypt(userPassword) 
+          if ent.personENT.id =null
+          {    if ent.personENT.NationalCode <> null    
+                    ent.personENT.id = select ID from cmperson where NationalCode=ent.personENT.NationalCode
+                    ent.PersonENT=ent.personENT.save();
+                    
+          }
+          
+         ent.userENT=ent.userENT.save();
+         syncUserGroupIds(param.id,ent.userGroupIds);
+         syncUserRoleIds(param.id,ent.userRoleIds);
+         syncUserSSASRoleIds(param.id,ent.userSSASRoleIds);
+         
+         syncUserUIRoles(userId);   /// in   GroupDAO 
+         
+         ent.userGroupIds= getUserGroupIds(ent.userENT.id);
+		 ent.userRoleIds=getUserRoleIds(ent.userENT.id);
+		 ent.userSSASRoleIds=getuserSSASRoleIds(ent.userENT.id)
+         
+         return ent;
+    }
+    
+    
+    public void ChangeUserPassword(ChangePasswordParam param)  throws AIPException{
+    
+         ent= New UserENT=  select * from userENT where UserName=param.webUser;
+        if (ent.userPassword= encrypt(param.oldPassword)) and (param.newPassowrd=param.ewPassowrd2)
+        { 
+              ent.setUserPassword(encrypt(param.newPassword);
+              ent.save;
+        {
+             
+             
+        }
+    
+    
+    }
+    
+    private String getUserGroupIds(userId)
+    {
+         String userGroupIds=  
+						select GROUP_CONCAT(g.ID,',') 
+						from scgroup  g
+						inner join scusergroup  ug
+						ON ug.`F_SCGroupID=g.ID
+						WHERE ug.F_SCUserID= 1
+		return 		userGroupIds;		
+    }
+    
+    private    String     getUserRoleIds(userId)
+     {
+              exec spSECGetUserRoleIdsWithGroupName(userId  )
+		
+    }
+    
+    private String getUserSSASRoleIds(userId)
+    {
+         // getFromSSAS DB
+     }
+    
+    
+    private  void syncUserGroupIds(UserId,String UserGroupIds)
+    {  // It is  done in law system }
+    
+    private  void syncUserRoleIds(UserId,String UserRoleIds)
+    {}
+    
+    private  void syncUserSSASRoleIds(UserId,String SSASRoleIds)
+    {}
+    
+   
+    private encryptPassword( String passw)
+    {
+    }
+    
+    
+    private   changePassword()
+    

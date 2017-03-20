@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/test.do" location="50,50" dimension="235,88" />
+  <StrutsActivity path="/saletrendinlocation1.do" location="350,50" dimension="311,88" />
+  <StrutsActivity path="/mdxreport.do" location="950,50" dimension="292,88" />
+  <StrutsActivity path="/visualreport.do" location="50,250" dimension="305,88" />
+  <StrutsActivity path="/visualreport2.do" location="650,250" dimension="311,88" />
+  <StrutsActivity path="/aipjsf.do" location="1250,250" dimension="248,88" />
+  <StrutsActivity path="/dimensions.do" location="50,450" dimension="267,88" />
+  <StrutsActivity path="/members.do" location="650,450" dimension="257,88" />
+  <StrutsActivity path="/members2.do" location="1250,450" dimension="263,88" />
+  <StrutsActivity path="/dimensions2.do" location="50,650" dimension="273,88" />
+  <StrutsActivity path="/memberswithcheck.do" location="650,650" dimension="308,88" />
+  <StrutsActivity path="/cubemeta.do" location="1250,650" dimension="263,88" />
+  <StrutsActivity path="/group.do" location="50,850" dimension="275,88" />
+  <StrutsActivity path="/user.do" location="650,850" dimension="236,88" />
+  <StrutsActivity path="/aipbimdx.do" location="950,850" dimension="257,88" />
+  <StrutsActivity path="/navigation.do" location="50,1050" dimension="265,88" />
+  <StrutsActivity path="/mdxFunctions.do" location="350,1450" dimension="354,104" />
+  <StrutsActivity path="/sale_trend_in_location1.jsp" location="650,1050" dimension="165,49" />
+  <StrutsActivity path="/jsp/mdxreportedit.jsp" location="1250,1050" dimension="137,49" />
+  <StrutsActivity path="/jsp/mdxreportlist.jsp" location="950,1050" dimension="132,49" />
+  <StrutsActivity path="/jsp/visual/visualreportedit.jsp" location="950,1150" dimension="175,49" />
+  <StrutsActivity path="/jsp/visual/visualreportlist.jsp" location="650,1150" dimension="170,49" />
+  <StrutsActivity path="/jsp/visualreportlist.jsp" location="1250,1150" dimension="139,49" />
+  <StrutsActivity path="/jsp/visual/visualreport1list.jsp" location="50,1250" dimension="176,49" />
+  <StrutsActivity path="/form/group/groupEdit.jsp" location="650,1250" dimension="155,49" />
+  <StrutsActivity path="/form/group/groupUserLists.jsp" location="950,1350" dimension="235,53" />
+  <StrutsActivity path="/form/group/groupList.jsp" location="350,1250" dimension="153,49" />
+  <StrutsActivity path="/form/user/userGroupAndRoleJustList.jsp" location="650,1350" dimension="228,49" />
+  <StrutsActivity path="/form/user/userEdit.jsp" location="50,1350" dimension="141,49" />
+  <StrutsActivity path="/form/user/userList.jsp" location="950,1250" dimension="139,49" />
+  <StrutsActivity path="/form/user/userSSASRoles.jsp" location="50,1450" dimension="225,53" />
+  <StrutsActivity path="/form/group/userSSASRoles.jsp" location="1250,1350" dimension="234,53" />
+  <StrutsActivity path="/form/user/groupJustList.jsp" location="1250,1250" dimension="166,49" />
+  <StrutsActivity path="/form/aipbimdx/aipbimdxList.jsp" location="350,1350" dimension="181,49" />
+  <StrutsTransition id="/visualreport.do,save,/jsp/visual/visualreportedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="355,294" />
+      <AbsolutePoint location="578,294" />
+      <AbsolutePoint location="578,1114" />
+      <AbsolutePoint location="1037,1114" />
+      <AbsolutePoint location="1037,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/visualreport.do,edit,/jsp/visual/visualreportedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="355,324" />
+      <AbsolutePoint location="430,324" />
+      <AbsolutePoint location="430,1214" />
+      <AbsolutePoint location="1037,1214" />
+      <AbsolutePoint location="1037,1199" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/visualreport.do,list,/jsp/visual/visualreportlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="340,338" />
+      <AbsolutePoint location="340,1174" />
+      <AbsolutePoint location="650,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/visualreport2.do,list,/jsp/visual/visualreport1list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,294" />
+      <AbsolutePoint location="608,294" />
+      <AbsolutePoint location="608,1314" />
+      <AbsolutePoint location="138,1314" />
+      <AbsolutePoint location="138,1299" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,ssas,/form/user/userSSASRoles.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="768,894" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/group/groupEdit.jsp,null,/group.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="727,1299" />
+      <AbsolutePoint location="727,1414" />
+      <AbsolutePoint location="548,1414" />
+      <AbsolutePoint location="548,864" />
+      <AbsolutePoint location="325,864" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/saletrendinlocation1.do,view,/sale_trend_in_location1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="400,138" />
+      <AbsolutePoint location="400,583" />
+      <AbsolutePoint location="5,583" />
+      <AbsolutePoint location="5,1013" />
+      <AbsolutePoint location="732,1013" />
+      <AbsolutePoint location="732,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/visualreport2.do,edit,/jsp/visual/visualreportedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,264" />
+      <AbsolutePoint location="460,264" />
+      <AbsolutePoint location="460,983" />
+      <AbsolutePoint location="1097,983" />
+      <AbsolutePoint location="1097,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,list,/form/user/userList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="865,938" />
+      <AbsolutePoint location="865,1274" />
+      <AbsolutePoint location="950,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/group.do,list,/form/group/groupList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="325,924" />
+      <AbsolutePoint location="400,924" />
+      <AbsolutePoint location="400,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/visual/visualreport1list.jsp,null,/visualreport2.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1274" />
+      <AbsolutePoint location="-25,1274" />
+      <AbsolutePoint location="-25,414" />
+      <AbsolutePoint location="805,414" />
+      <AbsolutePoint location="805,338" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/group.do,userList,/form/group/groupUserLists.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="187,894" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sale_trend_in_location1.jsp,null,/saletrendinlocation1.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,1074" />
+      <AbsolutePoint location="370,1074" />
+      <AbsolutePoint location="370,138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,grouplist,/form/user/userGroupAndRoleJustList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="768,894" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/user/userList.jsp,null,/user.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1019,1299" />
+      <AbsolutePoint location="1019,1474" />
+      <AbsolutePoint location="931,1474" />
+      <AbsolutePoint location="931,894" />
+      <AbsolutePoint location="886,894" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/group.do,edit,/form/group/groupEdit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="325,894" />
+      <AbsolutePoint location="518,894" />
+      <AbsolutePoint location="518,1274" />
+      <AbsolutePoint location="650,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mdxreport.do,list,/jsp/mdxreportlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1096,138" />
+      <AbsolutePoint location="1096,813" />
+      <AbsolutePoint location="901,813" />
+      <AbsolutePoint location="901,1074" />
+      <AbsolutePoint location="950,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mdxreport.do,edit,/jsp/mdxreportedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1242,124" />
+      <AbsolutePoint location="1528,124" />
+      <AbsolutePoint location="1528,1074" />
+      <AbsolutePoint location="1387,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,edit,/form/user/userEdit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="835,938" />
+      <AbsolutePoint location="835,1374" />
+      <AbsolutePoint location="191,1374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/visualreport2.do,save,/jsp/visual/visualreportedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="961,294" />
+      <AbsolutePoint location="1222,294" />
+      <AbsolutePoint location="1222,1174" />
+      <AbsolutePoint location="1125,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/mdxreportlist.jsp,null,/mdxreport.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1016,1050" />
+      <AbsolutePoint location="1016,1013" />
+      <AbsolutePoint location="1618,1013" />
+      <AbsolutePoint location="1618,94" />
+      <AbsolutePoint location="1242,94" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/visualreportlist.jsp,null,/visualreport.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1389,1174" />
+      <AbsolutePoint location="1588,1174" />
+      <AbsolutePoint location="1588,384" />
+      <AbsolutePoint location="202,384" />
+      <AbsolutePoint location="202,338" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+
